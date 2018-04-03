@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT, IT, Web, blog, 博客" />
+  <meta name="keywords" content="git,github," />
 
 
 
@@ -87,16 +87,18 @@
 
 
 
-<meta name="description" content="重回简单，感受美好。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jerry&#39;s blog">
-<meta property="og:url" content="http://jerryhanjj.com/index.html">
+<meta name="description" content="摘要">
+<meta name="keywords" content="git,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git、GitHub项目常用操作命令指南">
+<meta property="og:url" content="http://jerryhanjj.com/2018/04/03/Git、GitHub项目常用操作命令指南/index.html">
 <meta property="og:site_name" content="Jerry&#39;s blog">
-<meta property="og:description" content="重回简单，感受美好。">
+<meta property="og:description" content="摘要">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-03T14:30:35.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jerry&#39;s blog">
-<meta name="twitter:description" content="重回简单，感受美好。">
+<meta name="twitter:title" content="Git、GitHub项目常用操作命令指南">
+<meta name="twitter:description" content="摘要">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://jerryhanjj.com/"/>
+  <link rel="canonical" href="http://jerryhanjj.com/2018/04/03/Git、GitHub项目常用操作命令指南/"/>
 
 
 
 
 
-  <title>Jerry's blog</title>
+  <title>Git、GitHub项目常用操作命令指南 | Jerry's blog</title>
   
 
 
@@ -151,8 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +266,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -297,9 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/03/Git、GitHub项目常用操作命令指南/" itemprop="url">Git、GitHub项目常用操作命令指南</a></h1>
+          <h1 class="post-title" itemprop="name headline">Git、GitHub项目常用操作命令指南</h1>
         
 
         <div class="post-meta">
@@ -413,16 +412,102 @@
       
 
       
-        
-          <p>摘要<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/03/Git、GitHub项目常用操作命令指南/" rel="contents">
-              ReadMore &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>摘要<br><a id="more"></a><br>全文</p>
+<h2 id="Git-常用命令操作教程-附Git中文官方操作指南"><a href="#Git-常用命令操作教程-附Git中文官方操作指南" class="headerlink" title="Git 常用命令操作教程 [附Git中文官方操作指南]"></a>Git 常用命令操作教程 [附Git中文官方操作指南]</h2><ul>
+<li><p><strong>强烈建议</strong><br>  建议大家亲手查看<a href="https://git-scm.com/book/zh/v2" title="官方操作指南" target="_blank" rel="noopener">Git中文官方操作指南</a>，还有 PDF 和 电子书 可以下载！</p>
+</li>
+<li><p><strong>主要用途</strong><br>  团队合作和版本控制  </p>
+</li>
+<li><p><strong>安装</strong><br>  <code>window</code> 系统直接从Git官网下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">安装程序</a><br>  使用 <code>Git</code> 获取升级：<br>  <code>$ git clone git://git.kernel.org/pub/scm/git/git.git</code></p>
+</li>
+<li><p><strong>常用命令</strong>  </p>
+<ul>
+<li><code>git init</code> 初始化文件夹，出现隐藏文件夹 <code>.git</code>  </li>
+<li><code>git add &lt;files&gt;</code> 将更改的文件添加到待提交的状态  </li>
+<li><code>git commit -m &#39;xxx&#39;</code> 提交被修改过的文件到仓库  给 git commit 加上 -a 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 <code>git add</code> 步骤</li>
+<li><code>git status</code> 获取当前 <code>repository</code> 的状态（是否有修改等）  </li>
+<li><code>git diff</code> 查看工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。</li>
+<li><code>git diff --cached</code> 查看已暂存的将要添加到下次提交里的内容（已暂存和已提交的不同）</li>
+<li><code>git log -p -2</code> 查看提交记录、<code>commit id</code> 以便在版本回退时使用, -p 显示每次提交差异 -2 最近两次提交 <code>git log -pretty=oneline</code> 简化输出信息  </li>
+<li><code>git relog</code> 记录每次提交的<strong>命令</strong>，可以通过这个记录回到最新的版本 </li>
+<li><strong>版本回退</strong><ul>
+<li><code>git reset --hard HEAD^</code>  <blockquote>
+<p><strong>参数</strong>：HEAD^ 上个版本，HEAD^^ 上上个版本，前N个版本 HEAD~N<br>如果因为误操作或者其他原因需要<strong>再次回到最新版本</strong>，则需要 <code>commit id</code> 上场了：<code>git reset --hard commit_id</code><br>根据 <code>git log</code> 或者 <code>git reflog</code> 得到的 <code>commit id</code> 在不同版本间切换  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><code>git diff HEAD -- 文件名</code> 查看当前工作区和版本库中的 某文件 有什么不同  </li>
+<li><code>git checkout -- file</code> 撤销修改，回到最近一次 commit 或者 add 时的状态  </li>
+<li><code>git reset HEAD file</code> 将暂存区的修改回退到工作区  </li>
+<li><code>git rm file</code> 删除文件</li>
+<li><p><strong>…Or create a new repository on the command line</strong>  </p>
+<pre><code>echo &quot;# gittest&quot; &gt;&gt; README.md  
+git init  
+git add README.md  
+git commit -m &quot;first commit&quot;  
+git remote add origin git@github.com:youraccount/yourprojectname.git  
+（如果出现错误 fatal: remote origin already exists , 则 git remote rm origin 再执行上条命令）
+git push -u origin master  
+
+参数说明：-u ：由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支  
+         内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送  
+         或者拉取时就可以简化命令，使用 git push origin master 即可。  
+         master： 推送 master 分支
+</code></pre></li>
+<li><p><strong>…Or push an existing repository from the command line</strong>  </p>
+<pre><code>git remote add origin git@github.com:youraccount/yourprojectname.git
+git push -u origin master  
+</code></pre></li>
+<li><p><strong>克隆仓库</strong>  </p>
+<pre><code>$ git clone git@github.com:jerryhanjj/gittest.git
+Cloning into &apos;gittest&apos;...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.  
+</code></pre></li>
+<li><p><strong>分支管理**</strong>[一个很神奇的东西]**  </p>
+<ul>
+<li>创建分支名 <code>git branch 分支名</code></li>
+<li>切换分支   <code>git checkout 分支名</code></li>
+<li>一步到位（创建并切换） <code>git checkout -b 分支名</code> </li>
+<li>合并分支 <code>git merge 分支名</code> 如果遇到合并冲突，需要手动解决<ul>
+<li><code>$ git merge --no-ff -m &quot;提交信息&quot; 分支名</code> 禁用 <code>Fast forward</code> 合并模式，可以保留历史分支信息  </li>
+</ul>
+</li>
+<li>删除分支 <code>git branch -d 分支名</code>，若该分支未被合并则报错，<code>-D</code> 强制删除</li>
+<li><code>git branch</code>  <ul>
+<li><code>-v</code> 最后一次提交信息</li>
+<li><code>-vv</code> 这会将所有的本地分支列出来并且包含更多的信息，如每一个分支正在跟踪哪个远程分支与本地分支是否是领先、落后或是都有。</li>
+<li><code>--merged</code> 已被合并的分支（可以删除）</li>
+<li><code>--no-merged</code> 未被合并分支</li>
+</ul>
+</li>
+<li><p><code>$ git log --graph --pretty=oneline --abbrev-commit</code> 查看分支合并图  </p>
+<pre><code>$ git log --graph --pretty=oneline --abbrev-commit
+*   916eac9 (HEAD -&gt; master) merge dev with no-ff
+|\
+| * 1a1f2f3 change pro on dev
+|/
+* ff89d5e fz
+* a146f81 (origin/master, origin/HEAD) add pro.md
+* bfca575 remove project.md
+* 0e79ea5 project.md
+* 4ce4618 project.md
+* ec0e6db first commit
+</code></pre></li>
+</ul>
+</li>
+<li><strong>多人协作</strong><ul>
+<li>创建 dev 等分支进行开发</li>
+<li>把 dev 分支 push 到远程（GitHub） dev 分支上。如果推送失败，出现 冲突 先用git pull把最新的提交从 dev 抓下来，然后，在本地合并，解决冲突，再推送。</li>
+<li>再由 dev 推到 master 主分支上</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -434,17 +519,43 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    JerryHan
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://jerryhanjj.com/2018/04/03/Git、GitHub项目常用操作命令指南/" title="Git、GitHub项目常用操作命令指南">http://jerryhanjj.com/2018/04/03/Git、GitHub项目常用操作命令指南/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -454,10 +565,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -465,6 +577,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -485,8 +611,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -585,6 +720,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-常用命令操作教程-附Git中文官方操作指南"><span class="nav-number">1.</span> <span class="nav-text">Git 常用命令操作教程 [附Git中文官方操作指南]</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -737,6 +888,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -754,6 +909,18 @@
       <script id="dsq-count-scr" src="https://jerryhanjj.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://jerryhanjj.com/2018/04/03/Git、GitHub项目常用操作命令指南/';
+          this.page.identifier = '2018/04/03/Git、GitHub项目常用操作命令指南/';
+          this.page.title = 'Git、GitHub项目常用操作命令指南';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jerryhanjj.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

@@ -25,6 +25,8 @@
 
 
 
+  <meta name="google-site-verification" content="dRvNReUJO-knuYOByrApLH8jyeVNeTF5uW2IQWvwOro" />
+
 
 
 
@@ -65,27 +67,36 @@
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, NexT, IT, Web, blog, 博客" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jerry's blog" type="application/atom+xml" />
 
 
 
 
 
 
-
-
-
-
+<meta name="description" content="重回简单，感受美好。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="JerryHan&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
-<meta property="og:site_name" content="JerryHan&#39;s blog">
+<meta property="og:title" content="Jerry&#39;s blog">
+<meta property="og:url" content="http://jerryhanjj.com/archives/2018/index.html">
+<meta property="og:site_name" content="Jerry&#39;s blog">
+<meta property="og:description" content="重回简单，感受美好。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JerryHan&#39;s blog">
+<meta name="twitter:title" content="Jerry&#39;s blog">
+<meta name="twitter:description" content="重回简单，感受美好。">
 
 
 
@@ -95,7 +106,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -115,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/"/>
+  <link rel="canonical" href="http://jerryhanjj.com/archives/2018/"/>
 
 
 
 
 
-  <title>归档 | JerryHan's blog</title>
+  <title>归档 | Jerry's blog</title>
   
 
 
@@ -151,7 +162,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">JerryHan's blog</span>
+        <span class="site-title">Jerry's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -181,7 +192,37 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
@@ -191,7 +232,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            404
           </a>
         </li>
       
@@ -251,9 +302,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/04/02/hello-world/" itemprop="url">
+            <a class="post-title-link" href="/2018/04/03/Git、GitHub项目常用操作命令指南/" itemprop="url">
               
-                <span itemprop="name">Hello World</span>
+                <span itemprop="name">Git、GitHub项目常用操作命令指南</span>
               
             </a>
         
@@ -261,9 +312,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-02T23:06:12+08:00"
-              content="2018-04-02" >
-          04-02
+              datetime="2018-04-03T20:04:05+08:00"
+              content="2018-04-03" >
+          04-03
         </time>
       </div>
 
@@ -314,8 +365,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="JerryHan" />
+            
               <p class="site-author-name" itemprop="name">JerryHan</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">重回简单，感受美好。</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -326,19 +381,72 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-name">Article</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jerryhanjj" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:jerryhanjj@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/laughingjerry" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.weibo.com/junjiehan?is_all=1" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -366,12 +474,22 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">
+	<span>Copyright </span>&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-user-circle"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">JerryHan</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">1.1k</span>
   
 </div>
 
@@ -384,7 +502,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
 
 
 
@@ -404,6 +522,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -506,7 +626,7 @@
   
 
     
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+      <script id="dsq-count-scr" src="https://jerryhanjj.disqus.com/count.js" async></script>
     
 
     
@@ -528,10 +648,6 @@
 
 
 
-  
-
-
-
 
 
 
@@ -559,6 +675,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 
