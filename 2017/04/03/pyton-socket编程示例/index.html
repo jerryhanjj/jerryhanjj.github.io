@@ -91,18 +91,18 @@
 
 
 
-<meta name="description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接  Client demo_socket_client.py  点击显/隐 demo_socket_client.pylink12345">
+<meta name="description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接">
 <meta name="keywords" content="python,socket">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pyton socket编程示例">
+<meta property="og:title" content="pyton-socket编程示例">
 <meta property="og:url" content="https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/index.html">
 <meta property="og:site_name" content="Jerry&#39;s blog">
-<meta property="og:description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接  Client demo_socket_client.py  点击显/隐 demo_socket_client.pylink12345">
+<meta property="og:description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-05T15:33:54.435Z">
+<meta property="og:updated_time" content="2018-04-05T16:51:56.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pyton socket编程示例">
-<meta name="twitter:description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接  Client demo_socket_client.py  点击显/隐 demo_socket_client.pylink12345">
+<meta name="twitter:title" content="pyton-socket编程示例">
+<meta name="twitter:description" content="SOCKET编程简单示例功能说明 python版本3.5.1 客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送hello，*** client向server发送数据，server打印收到的数据 用线程处理多客户端连接">
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-  <title>pyton socket编程示例 | Jerry's blog</title>
+  <title>pyton-socket编程示例 | Jerry's blog</title>
   
 
 
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pyton socket编程示例</h1>
+          <h1 class="post-title" itemprop="name headline">pyton-socket编程示例</h1>
         
 
         <div class="post-meta">
@@ -409,7 +409,7 @@
 
           
           
-             <span id="/2017/04/03/pyton-socket编程示例/" class="leancloud_visitors" data-flag-title="pyton socket编程示例">
+             <span id="/2017/04/03/pyton-socket编程示例/" class="leancloud_visitors" data-flag-title="pyton-socket编程示例">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -477,6 +477,7 @@
 <li>client向server发送数据，server打印收到的数据</li>
 <li>用线程处理多客户端连接</li>
 </ul>
+<a id="more"></a>
 <h2 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h2><ul>
 <li>demo_socket_client.py</li>
 </ul>
@@ -491,6 +492,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">ser = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line">ser.bind((<span class="string">'127.0.0.1'</span>, <span class="number">8080</span>))</span><br><span class="line"></span><br><span class="line">ser.listen(<span class="number">5</span>)               <span class="comment"># 监听连接 如果有超过5个连接请求，从第6个开始不会被accept</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Server is running...'</span>)       <span class="comment"># 打印运行提示</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tcplink</span><span class="params">(connect, addr)</span>:</span></span><br><span class="line">    print(<span class="string">'Accept new connection from %s:%s...'</span> % addr)</span><br><span class="line">    connect.send(<span class="string">b'Welcome!\r\n'</span>+<span class="string">b'Please tell me your name:'</span>)</span><br><span class="line">    data = connect.recv(<span class="number">1024</span>)</span><br><span class="line">    connect.send((<span class="string">'Hello, %s'</span> % data.decode(<span class="string">'utf-8'</span>)).encode(<span class="string">'utf-8'</span>))</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        data = connect.recv(<span class="number">1024</span>)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> data <span class="keyword">or</span> data.decode(<span class="string">'utf-8'</span>) == <span class="string">'exit'</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(<span class="string">"Device: %s, Data: %s, Size: %s"</span> % (addr[<span class="number">0</span>], data.decode(<span class="string">'utf-8'</span>), len(data)))</span><br><span class="line">        connect.send(<span class="string">b'Data Receive'</span>)</span><br><span class="line">    connect.close()</span><br><span class="line">    print(<span class="string">'Connection from %s:%s closed'</span> % addr)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    sock, addr = ser.accept()</span><br><span class="line">    pthread = threading.Thread(target=tcplink, args=(sock, addr))   <span class="comment">#多线程处理socket连接</span></span><br><span class="line">    pthread.start()</span><br></pre></td></tr></table></figure>
 
 </div></div>
+
       
     </div>
     
@@ -510,11 +512,11 @@
   </li>
   <li class="post-copyright-author">
     <strong>本文标题：</strong>
-    pyton socket编程示例
+    pyton-socket编程示例
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/" title="pyton socket编程示例">https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/</a>
+    <a href="https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/" title="pyton-socket编程示例">https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1125,7 +1127,7 @@ var jiathis_config={
         var disqus_config = function () {
           this.page.url = 'https://www.jerryhanjj.com/2017/04/03/pyton-socket编程示例/';
           this.page.identifier = '2017/04/03/pyton-socket编程示例/';
-          this.page.title = 'pyton socket编程示例';
+          this.page.title = 'pyton-socket编程示例';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://jerryhanjj.disqus.com/embed.js';
