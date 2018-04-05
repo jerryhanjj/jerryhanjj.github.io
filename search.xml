@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title>ython  ocket编程简单示例</title>
+      <link href="/2018/04/05/ython-ocket%E7%BC%96%E7%A8%8B%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B/"/>
+      <url>/2018/04/05/ython-ocket%E7%BC%96%E7%A8%8B%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>Hexo博客搭建（二）：Next主题优化及个性化定制</title>
       <link href="/2018/04/05/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ANext%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%8F%8A%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/"/>
       <url>/2018/04/05/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ANext%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%8F%8A%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/</url>
@@ -82,31 +91,6 @@
     </entry>
     
     <entry>
-      <title>开源许可协议类别及使用条件</title>
-      <link href="/2017/06/07/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E7%B1%BB%E5%88%AB%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6/"/>
-      <url>/2017/06/07/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E7%B1%BB%E5%88%AB%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6/</url>
-      <content type="html"><![CDATA[<img src="/2017/06/07/开源许可协议类别及使用条件/1.png" title="开源许可协议区别">  <a id="more"></a><img src="/2017/06/07/开源许可协议类别及使用条件/2.png" title="使用条件">  <img src="/2017/06/07/开源许可协议类别及使用条件/3.png" title="协议使用流程导图">]]></content>
-      
-      <categories>
-          
-          <category> Others </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OpenSource </tag>
-            
-            <tag> 开源 </tag>
-            
-            <tag> 协议 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>Git上传文件、文件夹、项目到Github</title>
       <link href="/2017/05/27/Git%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%81%E9%A1%B9%E7%9B%AE%E5%88%B0Github/"/>
       <url>/2017/05/27/Git%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%81%E9%A1%B9%E7%9B%AE%E5%88%B0Github/</url>
@@ -124,6 +108,29 @@
             <tag> git </tag>
             
             <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>pyton socket编程示例</title>
+      <link href="/2017/04/03/pyton-socket%E7%BC%96%E7%A8%8B%E7%A4%BA%E4%BE%8B/"/>
+      <url>/2017/04/03/pyton-socket%E7%BC%96%E7%A8%8B%E7%A4%BA%E4%BE%8B/</url>
+      <content type="html"><![CDATA[<h1 id="SOCKET编程简单示例"><a href="#SOCKET编程简单示例" class="headerlink" title="SOCKET编程简单示例"></a>SOCKET编程简单示例</h1><h2 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h2><ul><li>python版本3.5.1</li><li>客户端连接服务器，server发送欢迎词并询问用户姓名，收到client回复，向client发送<code>hello，***</code></li><li>client向server发送数据，server打印收到的数据</li><li>用线程处理多客户端连接</li></ul><h2 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h2><ul><li>demo_socket_client.py</li></ul><div><div class="fold_hider"><div class="close hider_title">点击显/隐</div></div><div class="fold"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="comment"># client</span></span><br><span class="line">client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  <span class="comment">#AF_INET（IPV4使用） SOCK_STREAM（TCP模式）</span></span><br><span class="line"></span><br><span class="line">client.connect((<span class="string">'localhost'</span>, <span class="number">8080</span>))         <span class="comment">#连接本地回环地址127.0.0.1 端口号8080 以元组作为参数</span></span><br><span class="line"></span><br><span class="line">print(client.recv(<span class="number">1024</span>).decode(<span class="string">'utf-8'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    sendbuf = input()                      <span class="comment"># 输入</span></span><br><span class="line">    client.send(sendbuf.encode(<span class="string">'utf-8'</span>))   <span class="comment"># UTF-8编码</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> sendbuf <span class="keyword">or</span> sendbuf == <span class="string">'exit'</span>:   <span class="comment">#退出条件判断</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    recvbuf = client.recv(<span class="number">1024</span>)</span><br><span class="line">    print(recvbuf.decode(<span class="string">'utf-8'</span>))        <span class="comment"># 解码</span></span><br><span class="line">client.close()                            <span class="comment"># 断开连接</span></span><br><span class="line">print(<span class="string">'Connection was closed...'</span>)</span><br></pre></td></tr></table></figure></div></div>]]></content>
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> socket </tag>
             
         </tags>
       
